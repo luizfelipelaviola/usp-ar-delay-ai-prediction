@@ -1,0 +1,251 @@
+{
+  "benchmark": {
+    "amostra": {
+      "n_faturas": 2466,
+      "n_clientes": 100,
+      "inicio": "2012-01-03",
+      "fim": "2013-12-02",
+      "taxa_atraso": 0.35563665855636656,
+      "prazo_dias": 30,
+      "valor_mediano": 60.56
+    },
+    "prazos_distintos": 1,
+    "atraso_mediano_atrasadas": 8.0,
+    "atraso_maximo": 45,
+    "faixas_de_atraso": {
+      "em_dia": {
+        "faturas": 1589,
+        "fracao": 0.6443633414436334
+      },
+      "1_30": {
+        "faturas": 869,
+        "fracao": 0.3523925385239254
+      },
+      "31_60": {
+        "faturas": 8,
+        "fracao": 0.0032441200324412004
+      },
+      "61_90": {
+        "faturas": 0,
+        "fracao": 0.0
+      },
+      "90_mais": {
+        "faturas": 0,
+        "fracao": 0.0
+      }
+    },
+    "assinaturas_de_emissao": {
+      "faturas_por_dia_da_semana": {
+        "segunda": 347,
+        "terca": 342,
+        "quarta": 365,
+        "quinta": 336,
+        "sexta": 352,
+        "sabado": 378,
+        "domingo": 346
+      },
+      "dia_de_pico": "sabado",
+      "qui2_uniformidade": 3.580697485806975,
+      "p_uniformidade": 0.7332041300364315,
+      "fracao_em_fim_de_semana": 0.2935928629359286,
+      "valor_minimo": 5.26,
+      "valor_maximo": 128.28,
+      "assimetria_faturas_por_cliente": 0.3112126220031129,
+      "faturas_do_maior_cliente": 36,
+      "fracao_do_maior_cliente": 0.014598540145985401
+    },
+    "premissas": {
+      "qui2_homogeneidade": 1151.5659988330476,
+      "gl": 99,
+      "p_homogeneidade": 8.192470460064966e-179,
+      "variancia_explicada_pelo_cliente": 0.9171305459009489,
+      "spearman_historico": 0.5747717356166899,
+      "p_spearman": 6.195790579199061e-200
+    }
+  },
+  "transacional": {
+    "arquivo_bruto": {
+      "linhas": 50000,
+      "clientes": 1461,
+      "linhas_descartadas": 140
+    },
+    "amostra": {
+      "n_faturas": 49860,
+      "n_liquidadas": 45058,
+      "n_em_aberto": 4802,
+      "fracao_em_aberto": 0.09630966706778982,
+      "n_clientes": 1460,
+      "inicio": "2018-12-30",
+      "fim": "2020-05-19",
+      "data_observacao": "2020-05-22",
+      "prazos_distintos": 52,
+      "prazo_mediano": 15,
+      "taxa_atraso": 0.422610857117493,
+      "atraso_mediano_atrasadas": 2.0,
+      "atraso_maximo": 277,
+      "valor_mediano": 17517.75
+    },
+    "faturas_por_moeda": {
+      "USD": 46024,
+      "CAD": 3836
+    },
+    "faixas_de_atraso": {
+      "em_dia": {
+        "faturas": 26016,
+        "fracao": 0.577389142882507
+      },
+      "1_30": {
+        "faturas": 18046,
+        "fracao": 0.40050601447023837
+      },
+      "31_60": {
+        "faturas": 778,
+        "fracao": 0.01726663411602823
+      },
+      "61_90": {
+        "faturas": 157,
+        "fracao": 0.0034843978871676507
+      },
+      "90_mais": {
+        "faturas": 61,
+        "fracao": 0.0013538106440587688
+      }
+    },
+    "assinaturas_de_emissao": {
+      "faturas_por_dia_da_semana": {
+        "segunda": 7160,
+        "terca": 8359,
+        "quarta": 8950,
+        "quinta": 8262,
+        "sexta": 8071,
+        "sabado": 4832,
+        "domingo": 4226
+      },
+      "dia_de_pico": "quarta",
+      "qui2_uniformidade": 2906.7421179302046,
+      "p_uniformidade": 0.0,
+      "fracao_em_fim_de_semana": 0.1816686722823907,
+      "valor_minimo": 0.18,
+      "valor_maximo": 1011888.45,
+      "assimetria_faturas_por_cliente": 32.09872960648469,
+      "faturas_do_maior_cliente": 11419,
+      "fracao_do_maior_cliente": 0.22902125952667468
+    },
+    "premissas": {
+      "qui2_homogeneidade": 12981.65701429488,
+      "gl": 545,
+      "p_homogeneidade": 0.0,
+      "variancia_explicada_pelo_cliente": 0.9685207101884024,
+      "spearman_historico": 0.46780409983665244,
+      "p_spearman": 0.0
+    },
+    "calendario": {
+      "por_dia_do_vencimento": {
+        "segunda": {
+          "faturas": 4893,
+          "taxa_atraso": 0.4265276926221132
+        },
+        "terca": {
+          "faturas": 6303,
+          "taxa_atraso": 0.3793431699190862
+        },
+        "quarta": {
+          "faturas": 6934,
+          "taxa_atraso": 0.33328526103259304
+        },
+        "quinta": {
+          "faturas": 7447,
+          "taxa_atraso": 0.36363636363636365
+        },
+        "sexta": {
+          "faturas": 7018,
+          "taxa_atraso": 0.31903676261043035
+        },
+        "sabado": {
+          "faturas": 7187,
+          "taxa_atraso": 0.5900932238764436
+        },
+        "domingo": {
+          "faturas": 5276,
+          "taxa_atraso": 0.5809325246398787
+        }
+      },
+      "taxa_fim_de_semana": 0.5862151969830699,
+      "taxa_dia_util": 0.3600552231937414,
+      "fracao_atraso_ate_dois_dias_no_fim_de_semana": 0.6041609635915686
+    }
+  },
+  "conjunto_excluido": {
+    "arquivo_bruto": {
+      "linhas": 45839,
+      "clientes": 69
+    },
+    "amostra": {
+      "n_faturas": 45837,
+      "n_clientes": 69,
+      "inicio": "2011-11-23",
+      "fim": "2016-02-25",
+      "prazos_distintos": 151,
+      "prazo_mediano": 5.0,
+      "taxa_atraso": 0.5300957741562493,
+      "atraso_mediano_atrasadas": 2.0,
+      "atraso_maximo": 1257,
+      "valor_mediano": 3196.0
+    },
+    "assinaturas_de_emissao": {
+      "faturas_por_dia_da_semana": {
+        "segunda": 10823,
+        "terca": 10076,
+        "quarta": 9307,
+        "quinta": 8449,
+        "sexta": 7182,
+        "sabado": 0,
+        "domingo": 0
+      },
+      "dia_de_pico": "segunda",
+      "qui2_uniformidade": 19563.23459214172,
+      "p_uniformidade": 0.0,
+      "fracao_em_fim_de_semana": 0.0,
+      "valor_minimo": 2.0,
+      "valor_maximo": 5709354.0,
+      "assimetria_faturas_por_cliente": 3.71148220901334,
+      "faturas_do_maior_cliente": 10219,
+      "fracao_do_maior_cliente": 0.22294216462682986
+    },
+    "calendario": {
+      "por_dia_do_vencimento": {
+        "segunda": {
+          "faturas": 9194,
+          "taxa_atraso": 0.6357407004568196
+        },
+        "terca": {
+          "faturas": 7593,
+          "taxa_atraso": 0.3131831950480706
+        },
+        "quarta": {
+          "faturas": 7619,
+          "taxa_atraso": 0.22982018637616486
+        },
+        "quinta": {
+          "faturas": 968,
+          "taxa_atraso": 0.2334710743801653
+        },
+        "sexta": {
+          "faturas": 745,
+          "taxa_atraso": 0.3530201342281879
+        },
+        "sabado": {
+          "faturas": 10809,
+          "taxa_atraso": 0.5266907206957165
+        },
+        "domingo": {
+          "faturas": 8909,
+          "taxa_atraso": 0.9139072847682119
+        }
+      },
+      "taxa_fim_de_semana": 0.701643168678365,
+      "taxa_dia_util": 0.40058960909682606,
+      "fracao_atraso_ate_dois_dias_no_fim_de_semana": 0.7966750993856162
+    }
+  }
+}

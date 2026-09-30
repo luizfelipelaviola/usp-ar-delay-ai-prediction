@@ -1,0 +1,169 @@
+{
+  "benchmark": {
+    "particao": "treino ate 2013-06-09, teste a partir de 2013-06-09, treino apenas com desfecho conhecido no corte",
+    "corte": "2013-06-09",
+    "n_treino_antes_da_restricao": 1858,
+    "n_treino": 1779,
+    "n_treino_retiradas_sem_desfecho": 79,
+    "n_teste": 608,
+    "tabela": [
+      {
+        "modelo": "regressao_logistica",
+        "roc_auc": 0.8828649259185435,
+        "roc_auc_ic_inf": 0.8544810976014883,
+        "roc_auc_ic_sup": 0.9100797289216663,
+        "pr_auc": 0.7452848563919371,
+        "pr_auc_ic_inf": 0.685719652022171,
+        "pr_auc_ic_sup": 0.8090593059341418
+      },
+      {
+        "modelo": "xgboost",
+        "roc_auc": 0.8638362899475118,
+        "roc_auc_ic_inf": 0.8313716696565012,
+        "roc_auc_ic_sup": 0.8938014085442828,
+        "pr_auc": 0.719036005097599,
+        "pr_auc_ic_inf": 0.6633076511665003,
+        "pr_auc_ic_sup": 0.7785567185275402
+      },
+      {
+        "modelo": "historico_cliente",
+        "roc_auc": 0.8628928310411268,
+        "roc_auc_ic_inf": 0.8316846056740416,
+        "roc_auc_ic_sup": 0.8925592983854893,
+        "pr_auc": 0.6710972167323855,
+        "pr_auc_ic_inf": 0.6076943600187359,
+        "pr_auc_ic_sup": 0.7396832715913757
+      }
+    ],
+    "comparacoes": [
+      {
+        "modelo_a": "regressao_logistica",
+        "modelo_b": "historico_cliente",
+        "diferenca_pr_auc": 0.07418763965955155,
+        "pr_auc_ic_inf": 0.02926589523919874,
+        "pr_auc_ic_sup": 0.11958694993470494,
+        "p_bootstrap_pr_auc": 0.0,
+        "pr_auc_significativo_holm": true,
+        "diferenca_roc_auc": 0.019972094877416913,
+        "p_delong_roc_auc": 0.0227902393409678,
+        "roc_auc_significativo_holm": true
+      },
+      {
+        "modelo_a": "xgboost",
+        "modelo_b": "historico_cliente",
+        "diferenca_pr_auc": 0.04793878836521348,
+        "pr_auc_ic_inf": 0.007987190348664705,
+        "pr_auc_ic_sup": 0.0863004595809554,
+        "p_bootstrap_pr_auc": 0.013,
+        "pr_auc_significativo_holm": true,
+        "diferenca_roc_auc": 0.0009434589063850307,
+        "p_delong_roc_auc": 0.9025222384025144,
+        "roc_auc_significativo_holm": false
+      },
+      {
+        "modelo_a": "xgboost",
+        "modelo_b": "regressao_logistica",
+        "diferenca_pr_auc": -0.02624885129433807,
+        "pr_auc_ic_inf": -0.06030483075187641,
+        "pr_auc_ic_sup": 0.008900365836977992,
+        "p_bootstrap_pr_auc": 0.137,
+        "pr_auc_significativo_holm": false,
+        "diferenca_roc_auc": -0.019028635971031882,
+        "p_delong_roc_auc": 0.01644420073997077,
+        "roc_auc_significativo_holm": true
+      }
+    ],
+    "controle_positivo": {
+      "modelo": "xgboost",
+      "roc_auc": 1.0,
+      "pr_auc": 1.0
+    },
+    "ablacao": {
+      "completo": 0.7452848563919371,
+      "sem_historico_pagamento": 0.5530426772629619
+    }
+  },
+  "transacional": {
+    "particao": "treino ate 2019-11-13, teste a partir de 2019-11-13, treino apenas com desfecho conhecido no corte",
+    "corte": "2019-11-13",
+    "n_treino_antes_da_restricao": 35386,
+    "n_treino": 33610,
+    "n_treino_retiradas_sem_desfecho": 1776,
+    "n_teste": 9672,
+    "tabela": [
+      {
+        "modelo": "xgboost",
+        "roc_auc": 0.8410285164405111,
+        "roc_auc_ic_inf": 0.8331162329198344,
+        "roc_auc_ic_sup": 0.8490841332581719,
+        "pr_auc": 0.8105113174990517,
+        "pr_auc_ic_inf": 0.8009698051737408,
+        "pr_auc_ic_sup": 0.8202523815521893
+      },
+      {
+        "modelo": "regressao_logistica",
+        "roc_auc": 0.8140760214383491,
+        "roc_auc_ic_inf": 0.8050847267896799,
+        "roc_auc_ic_sup": 0.823020434441919,
+        "pr_auc": 0.7742073379524352,
+        "pr_auc_ic_inf": 0.7629958255897134,
+        "pr_auc_ic_sup": 0.785741574403805
+      },
+      {
+        "modelo": "historico_cliente",
+        "roc_auc": 0.779981831303969,
+        "roc_auc_ic_inf": 0.7703996812689067,
+        "roc_auc_ic_sup": 0.7892178926048466,
+        "pr_auc": 0.7287193692901941,
+        "pr_auc_ic_inf": 0.7158304173795865,
+        "pr_auc_ic_sup": 0.7414273609736568
+      }
+    ],
+    "comparacoes": [
+      {
+        "modelo_a": "regressao_logistica",
+        "modelo_b": "historico_cliente",
+        "diferenca_pr_auc": 0.04548796866224114,
+        "pr_auc_ic_inf": 0.0374393348468934,
+        "pr_auc_ic_sup": 0.05345928291030008,
+        "p_bootstrap_pr_auc": 0.0,
+        "pr_auc_significativo_holm": true,
+        "diferenca_roc_auc": 0.03409419013438009,
+        "p_delong_roc_auc": 0.0,
+        "roc_auc_significativo_holm": true
+      },
+      {
+        "modelo_a": "xgboost",
+        "modelo_b": "historico_cliente",
+        "diferenca_pr_auc": 0.0817919482088576,
+        "pr_auc_ic_inf": 0.07267237646954179,
+        "pr_auc_ic_sup": 0.09142067944207079,
+        "p_bootstrap_pr_auc": 0.0,
+        "pr_auc_significativo_holm": true,
+        "diferenca_roc_auc": 0.0610466851365421,
+        "p_delong_roc_auc": 0.0,
+        "roc_auc_significativo_holm": true
+      },
+      {
+        "modelo_a": "xgboost",
+        "modelo_b": "regressao_logistica",
+        "diferenca_pr_auc": 0.03630397954661646,
+        "pr_auc_ic_inf": 0.030226330910798575,
+        "pr_auc_ic_sup": 0.04286316732294991,
+        "p_bootstrap_pr_auc": 0.0,
+        "pr_auc_significativo_holm": true,
+        "diferenca_roc_auc": 0.026952495002162014,
+        "p_delong_roc_auc": 0.0,
+        "roc_auc_significativo_holm": true
+      }
+    ],
+    "fim_do_desfecho": {
+      "data_observacao": "2020-05-22",
+      "faturas_em_aberto": 4802,
+      "primeira_emissao_em_aberto": "2020-02-27",
+      "ultima_emissao_liquidada": "2020-02-27",
+      "ultima_emissao_do_arquivo": "2020-05-19",
+      "liquidadas_emitidas_apos_primeira_em_aberto": 0
+    }
+  }
+}

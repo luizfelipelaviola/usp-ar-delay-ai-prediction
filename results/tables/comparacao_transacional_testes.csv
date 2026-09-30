@@ -1,0 +1,4 @@
+modelo_a,modelo_b,diferenca_pr_auc,pr_auc_ic_inf,pr_auc_ic_sup,p_bootstrap_pr_auc,pr_auc_significativo_holm,diferenca_roc_auc,p_delong_roc_auc,roc_auc_significativo_holm
+regressao_logistica,historico_cliente,0.04548796866224114,0.0374393348468934,0.05345928291030008,0.0,True,0.03409419013438009,0.0,True
+xgboost,historico_cliente,0.0817919482088576,0.07267237646954179,0.09142067944207079,0.0,True,0.0610466851365421,0.0,True
+xgboost,regressao_logistica,0.03630397954661646,0.030226330910798575,0.04286316732294991,0.0,True,0.026952495002162014,0.0,True
