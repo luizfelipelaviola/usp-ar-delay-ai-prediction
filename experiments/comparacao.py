@@ -6,7 +6,7 @@ na data do corte (`arml.splits.maturar`).
 
 Para cada conjunto, os tres comparadores do texto (regra simples, regressao
 logistica e XGBoost) sao avaliados com os mesmos atributos, e cada par recebe dois
-testes: bootstrap pareado da precisao media e DeLong da ROC-AUC. A correcao de
+testes, o bootstrap pareado da precisao media e o DeLong da ROC-AUC. A correcao de
 Holm e aplicada separadamente a cada metrica, sobre as tres comparacoes de cada
 conjunto.
 

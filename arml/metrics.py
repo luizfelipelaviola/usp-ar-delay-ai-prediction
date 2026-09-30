@@ -102,7 +102,7 @@ def paired_bootstrap_test(
         )
         diferencas[i] = fn(y_true[sel], score_a[sel]) - fn(y_true[sel], score_b[sel])
 
-    # Valor-p bilateral: proporcao de reamostras cuja diferenca troca de sinal
+    # Valor-p bilateral, dado pela proporcao de reamostras cuja diferenca troca de sinal
     # em relacao a diferenca observada, duplicada para cobrir as duas caudas.
     p = 2 * min(float(np.mean(diferencas <= 0)), float(np.mean(diferencas >= 0)))
     return {

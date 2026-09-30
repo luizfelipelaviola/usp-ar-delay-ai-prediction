@@ -1,4 +1,4 @@
-"""Figuras do trabalho: distribuicao do atraso e heterogeneidade entre clientes no benchmark.
+"""Figuras do trabalho, com a distribuicao do atraso e a heterogeneidade entre clientes no benchmark.
 
 Escala de cinza com um acento, legivel impressa em preto e branco.
 """
@@ -51,12 +51,12 @@ def main() -> None:
     df = load_dataset()
 
     fig, (a, b) = plt.subplots(1, 2, figsize=(9, 3.2))
-    a.hist(df["y_days"], bins=range(0, 48, 2), color=CLARO, edgecolor=CINZA, linewidth=0.5)
+    a.hist(df["y_days"], bins=range(0, 47), color=CLARO, edgecolor=CINZA, linewidth=0.5)
     a.set_xlabel("dias de atraso")
     a.set_ylabel("faturas")
     a.set_title("Todas as faturas", fontsize=9)
     atrasadas = df.loc[df["y_late"] == 1, "y_days"]
-    b.hist(atrasadas, bins=range(0, 48, 2), color=ACENTO, alpha=0.85)
+    b.hist(atrasadas, bins=range(0, 47), color=ACENTO, alpha=0.85)
     b.set_xlabel("dias de atraso")
     b.set_title(f"Apenas as atrasadas (n = {len(atrasadas)})", fontsize=9)
     fig.suptitle("Distribuição do atraso de pagamento", fontsize=10)
@@ -69,7 +69,7 @@ def main() -> None:
                label=f"média geral {df['y_late'].mean() * 100:.1f}%".replace(".", ","))
     ax.set_xlabel("clientes, ordenados pela taxa de atraso")
     ax.set_ylabel("taxa de atraso")
-    ax.yaxis.set_major_formatter(FuncFormatter(lambda valor, _: f"{valor:.1f}".replace(".", ",")))
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda valor, _: f"{valor * 100:.0f}%"))
     ax.set_title("Heterogeneidade da taxa de atraso entre clientes", fontsize=10)
     ax.legend(frameon=False)
     salvar(fig, "fig02_heterogeneidade_clientes")

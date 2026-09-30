@@ -51,7 +51,7 @@ def load_dataset(path=ARQUIVO) -> pd.DataFrame:
     out = out.dropna(subset=["InvoiceDate", "DueDate", "SettledDate", "InvoiceAmount"]).copy()
     out["prazo_dias"] = (out["DueDate"] - out["InvoiceDate"]).dt.days
     # Prazo negativo indica lancamento retroativo; acima de um ano, erro de
-    # digitacao. Ambos sao descartados, como nos demais conjuntos.
+    # digitacao. Ambos sao descartados, como no conjunto transacional.
     out = out[(out["prazo_dias"] >= 0) & (out["prazo_dias"] <= 365)].copy()
 
     atraso = (out["SettledDate"] - out["DueDate"]).dt.days

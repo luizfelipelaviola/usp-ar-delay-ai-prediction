@@ -50,7 +50,7 @@ def load_raw(path=AR_CSV) -> pd.DataFrame:
 def build_targets(df: pd.DataFrame, threshold: int = LATE_THRESHOLD_DAYS) -> pd.DataFrame:
     """Deriva o rotulo e as grandezas de atraso usadas nos atributos e na caracterizacao.
 
-    ``y_late``    binaria, o rotulo do trabalho: liquidacao apos o vencimento
+    ``y_late``    binaria, o rotulo do trabalho, igual a 1 quando a liquidacao ocorre apos o vencimento
     ``y_days``    contagem de dias de atraso, zero quando em dia
     ``y_settle``  dias entre emissao e liquidacao, usado no historico do cliente
     """
